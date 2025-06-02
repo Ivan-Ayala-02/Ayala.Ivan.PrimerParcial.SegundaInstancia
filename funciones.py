@@ -54,8 +54,10 @@ def convertir_cadena(cadena_original:str, tipo_de_conversion:int) -> str:
                 caracter = chr(orden_caracter - 32)
         
         elif tipo_de_conversion == 2:
-            if i == 0 and orden_caracter >= 97 and orden_caracter <= 122:
+            if i == 0 and (orden_caracter >= 97 and orden_caracter <= 122):
                 caracter = chr(orden_caracter - 32)
+            elif i == 0 and (orden_caracter >= 65 and orden_caracter <= 89):
+                caracter = chr(orden_caracter)
             elif orden_caracter >= 65 and orden_caracter <= 89:
                 caracter = chr(orden_caracter + 32)
             

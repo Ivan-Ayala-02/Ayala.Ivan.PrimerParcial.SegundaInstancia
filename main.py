@@ -9,12 +9,7 @@ continuar_menu = "si"
 while continuar_menu == "si":
     
     mostrar_menu()
-    opcion = input("Ingrese opcion a elegir: ")
-    opcion = convertir_cadenas_a_numeros(opcion)
-    while validar_numero_dentro_de_rango(opcion, 1, 11) == False:
-        opcion = input("[ERROR] Ingrese opcion valida a elegir: ")
-        opcion = convertir_cadenas_a_numeros(opcion)
-    print()
+    opcion = ingreso_opcion()
 
     match opcion:
 
@@ -60,8 +55,4 @@ while continuar_menu == "si":
         case 11:
             mostrar_usuarios_tesla_acciones_mayor_promedio(empresas, valor_acciones, usuarios_vip, acciones_usuarios_vip)
     
-    continuar_menu = input("Desea continuar en el menu (si/no): ")
-    continuar_menu = convertir_cadena(continuar_menu, 0)
-    while validar_continuar_menu(continuar_menu) == False:
-        continuar_menu = input("[ERROR] Seleccione una opcion valida para continuar en el menu (si/no): ")
-        continuar_menu = convertir_cadena(continuar_menu, 0)
+    continuar_menu = ingreso_continuar_menu()

@@ -26,13 +26,6 @@ Menu de Opciones
 # Opcion 1 -----------
 def registrar_transaccion(usuario:str, empresa:str, acciones_adquiridas:int, lista_usuarios:list, lista_empresas:list, lista_precios:list, matriz_acciones_usuarios:list):
 
-    '''if empresa == "APPLE":
-        pos_en_list_empresa = 0
-    elif empresa == "TESLA":
-        pos_en_list_empresa = 1
-    elif empresa == "NVIDIA":
-        pos_en_list_empresa = 2'''
-
     pos_en_list_empresa = buscar_posicion_elemento_en_lista(empresa, lista_empresas)
     pos_en_list_usuario = buscar_posicion_elemento_en_lista(usuario, lista_usuarios) # -- Funcion --
 
